@@ -12,12 +12,9 @@ if (contactForm) {
         let visitorName = document.getElementById("visitor-name").value;
         
         formStatus.innerHTML = "Thank you, " + visitorName + "! My system has successfully recorded your message.";
-        formStatus.classList.add("text-success", "fw-bold"); // Using Bootstrap text color class
+        formStatus.classList.add("text-success", "fw-bold"); 
         
         contactForm.reset();
-        
-        // Note: Bootstrap modals usually stay open until the user clicks close, 
-        // so we don't need the custom setTimeout closing function anymore.
     });
 }
 
