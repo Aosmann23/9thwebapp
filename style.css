@@ -1,0 +1,12 @@
+/* ==========================================================================
+   Minimal Custom CSS (Bootstrap handles the rest)
+   ========================================================================== */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Optional: Slight tracking on the hero greeting for a premium look */
+.tracking-wide {
+    letter-spacing: 2px;
+}
