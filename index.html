@@ -13,19 +13,27 @@
     <!-- Bootstrap Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
         <div class="container">
-            <a class="navbar-brand fw-bold text-primary" href="#">My Portfolio</a>
+            <!-- Mobile Toggle -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            
+            <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarNav">
+                <!-- Far Left: Contact Button -->
                 <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link text-primary fw-bold" href="#" data-bs-toggle="modal" data-bs-target="#contactModal">Contact</a></li>
+                </ul>
+                
+                <!-- Center: Main Links -->
+                <ul class="navbar-nav mx-auto">
                     <li class="nav-item"><a class="nav-link" href="#hero">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#hobbies">Hobbies</a></li>
                     <li class="nav-item"><a class="nav-link" href="#favorites">Favorites</a></li>
                     <li class="nav-item"><a class="nav-link" href="#daily-quote">Inspiration</a></li>
-                    <!-- Button trigger for Bootstrap Modal -->
-                    <li class="nav-item"><a class="nav-link text-primary fw-bold" href="#" data-bs-toggle="modal" data-bs-target="#contactModal">Contact</a></li>
                 </ul>
+
+                <!-- Invisible placeholder div to perfectly balance the layout and keep main links dead center -->
+                <div style="width: 75px;" class="d-none d-lg-block"></div>
             </div>
         </div>
     </nav>
@@ -59,17 +67,14 @@
                         <div class="carousel-item active">
                             <span class="display-1 d-block mb-3">🎮</span>
                             <h3>Gaming</h3>
-                            <p class="text-secondary">Relaxing and competing online with friends.</p>
                         </div>
                         <div class="carousel-item">
                             <span class="display-1 d-block mb-3">🏋️</span>
                             <h3>Gym</h3>
-                            <p class="text-secondary">Staying active, maintaining discipline, and reaching fitness goals.</p>
                         </div>
                         <div class="carousel-item">
                             <span class="display-1 d-block mb-3">✈️</span>
                             <h3>Travelling</h3>
-                            <p class="text-secondary">Exploring new cultures, places, and broadening my perspective.</p>
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#hobbiesCarousel" data-bs-slide="prev">
@@ -92,7 +97,6 @@
                 <h2 class="fw-bold">My Favorites</h2>
                 <p class="text-secondary">A glimpse into the media I enjoy.</p>
             </div>
-            <!-- Bootstrap Grid System -->
             <div class="row align-items-center">
                 <div class="col-md-6 mb-4 mb-md-0">
                     <img src="image_359d26.jpg" alt="Game of Thrones scene" class="img-fluid rounded shadow">
@@ -123,7 +127,7 @@
         </div>
     </section>
 
-    <!-- Bootstrap Modal (Replaces custom sidebar for Contact Form) -->
+    <!-- Bootstrap Modal (Contact Form) -->
     <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -134,7 +138,6 @@
                 <div class="modal-body">
                     <p class="text-secondary mb-4">Would you like to discuss tech consulting, project management, or leave website feedback? I would love to hear from you.</p>
                     
-                    <!-- Bootstrap Forms -->
                     <form id="contact-form">
                         <div class="mb-3">
                             <label for="visitor-name" class="form-label fw-bold">Name:</label>
@@ -168,11 +171,15 @@
     <footer class="bg-dark text-white text-center py-4">
         <div class="container">
             <h5 class="fw-bold">Thank you for visiting!</h5>
-            <p class="text-secondary">Built for Week 6 using Bootstrap 5 & JavaScript.</p>
+            <p class="text-secondary mb-3">Built for Week 6 using Bootstrap 5 & JavaScript.</p>
+            <div class="footer-links">
+                <a href="https://www.w3schools.com" target="_blank" rel="noopener noreferrer" class="text-primary text-decoration-none mx-2">W3Schools Reference</a> | 
+                <a href="https://aosmann23.github.io/4thwebpage/" target="_blank" rel="noopener noreferrer" class="text-primary text-decoration-none mx-2">View Older Web App Iteration</a>
+            </div>
         </div>
     </footer>
 
-    <!-- Bootstrap 5 JS Bundle (Requires Popper for Modals/Dropdowns) -->
+    <!-- Bootstrap 5 JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <!-- My external JavaScript file -->
     <script src="script.js"></script>
