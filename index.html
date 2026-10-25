@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Web Development Portfolio - Bootstrap Edition</title>
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light">
+
+    <!-- Bootstrap Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="#">My Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#hero">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#hobbies">Hobbies</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#favorites">Favorites</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#daily-quote">Inspiration</a></li>
+                    <!-- Button trigger for Bootstrap Modal -->
+                    <li class="nav-item"><a class="nav-link text-primary fw-bold" href="#" data-bs-toggle="modal" data-bs-target="#contactModal">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="hero" class="container-fluid bg-white text-center py-5 shadow-sm mb-5">
+        <div class="container py-5">
+            <span class="text-primary fw-bold tracking-wide">HELLO, WELCOME TO MY PAGE</span>
+            <h1 class="display-4 fw-bold text-dark mt-3 mb-4">Aspiring Tech Consultant & IT Project Manager</h1>
+            <p class="lead text-secondary mx-auto" style="max-width: 800px;">
+                I have an undergraduate degree in <strong>business</strong> and work full-time in a sales role while pursuing my Master's degree in <strong>Computer Science and Data Analytics</strong>.
+            </p>
+            <div class="mt-4">
+                <button class="btn btn-primary btn-lg rounded-pill px-4 me-2" data-bs-toggle="modal" data-bs-target="#contactModal">Get in Touch</button>
+                <a href="#favorites" class="btn btn-outline-secondary btn-lg rounded-pill px-4">Explore My Interests</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hobbies Section (Bootstrap Carousel) -->
+    <section id="hobbies" class="container mb-5">
+        <div class="text-center mb-4">
+            <h2 class="fw-bold">A Little About Me</h2>
+            <p class="text-secondary">Outside of my Master's studies and work, here is how I spend my time.</p>
+        </div>
+        
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div id="hobbiesCarousel" class="carousel slide shadow rounded bg-white p-5 text-center" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <span class="display-1 d-block mb-3">🎮</span>
+                            <h3>Gaming</h3>
+                            <p class="text-secondary">Relaxing and competing online with friends.</p>
+                        </div>
+                        <div class="carousel-item">
+                            <span class="display-1 d-block mb-3">🏋️</span>
+                            <h3>Gym</h3>
+                            <p class="text-secondary">Staying active, maintaining discipline, and reaching fitness goals.</p>
+                        </div>
+                        <div class="carousel-item">
+                            <span class="display-1 d-block mb-3">✈️</span>
+                            <h3>Travelling</h3>
+                            <p class="text-secondary">Exploring new cultures, places, and broadening my perspective.</p>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#hobbiesCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon bg-dark rounded-circle" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#hobbiesCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon bg-dark rounded-circle" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Favorites Section (Bootstrap Grid) -->
+    <section id="favorites" class="bg-white py-5 mb-5 shadow-sm">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">My Favorites</h2>
+                <p class="text-secondary">A glimpse into the media I enjoy.</p>
+            </div>
+            <!-- Bootstrap Grid System -->
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <img src="image_359d26.jpg" alt="Game of Thrones scene" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-md-6 px-4">
+                    <h2 class="fw-bold">Game of Thrones</h2>
+                    <p class="text-secondary fs-5">An epic fantasy series of power, family, and survival. The world-building, political intrigue, and character arcs make it my absolute favorite television show.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- API Section: Random Quote Generator (Bootstrap Card) -->
+    <section id="daily-quote" class="container mb-5">
+        <div class="text-center mb-4">
+            <h2 class="fw-bold">Daily Inspiration</h2>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card shadow-sm border-0 text-center p-5">
+                    <div class="card-body">
+                        <p id="quote-text" class="fs-4 fst-italic text-dark mb-3">Loading today's quote...</p>
+                        <p id="quote-author" class="fs-5 fw-bold text-primary mb-4"></p>
+                        <button id="new-quote-btn" class="btn btn-outline-primary rounded-pill">Get Another Quote</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap Modal (Replaces custom sidebar for Contact Form) -->
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold" id="contactModalLabel">Get in Touch</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-secondary mb-4">Would you like to discuss tech consulting, project management, or leave website feedback? I would love to hear from you.</p>
+                    
+                    <!-- Bootstrap Forms -->
+                    <form id="contact-form">
+                        <div class="mb-3">
+                            <label for="visitor-name" class="form-label fw-bold">Name:</label>
+                            <input type="text" class="form-control" id="visitor-name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="visitor-email" class="form-label fw-bold">Email Address:</label>
+                            <input type="email" class="form-control" id="visitor-email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="inquiry-type" class="form-label fw-bold">Reason for Contact:</label>
+                            <select class="form-select" id="inquiry-type">
+                                <option value="feedback">Website Feedback</option>
+                                <option value="networking">Professional Networking</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="visitor-message" class="form-label fw-bold">Message:</label>
+                            <textarea class="form-control" id="visitor-message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 rounded-pill">Send Message</button>
+                        <p id="form-status" class="mt-3 text-center" aria-live="polite" role="status"></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <h5 class="fw-bold">Thank you for visiting!</h5>
+            <p class="text-secondary">Built for Week 6 using Bootstrap 5 & JavaScript.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle (Requires Popper for Modals/Dropdowns) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- My external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
